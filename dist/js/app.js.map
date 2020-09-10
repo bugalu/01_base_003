@@ -1,0 +1,1 @@
+{"version":3,"sources":["app.ts"],"names":[],"mappings":";;AACA,IAAI,MAAM,GAAW,iBAAiB,CAAC","file":"app.js","sourcesContent":["export { };\nlet author: string = 'office OR-IKEDA';"]}
