@@ -2,8 +2,6 @@ const { src, dest, watch, series, parallel } = require('gulp');
 const loadPlugins = require('gulp-load-plugins');
 const $ = loadPlugins();
 
-
-
 //ベンダープレフィックス
 const autoprefixer = require('autoprefixer');
 
@@ -11,18 +9,10 @@ const autoprefixer = require('autoprefixer');
 const browserSync = require('browser-sync');
 const server = browserSync.create();
 
-
-// function compile() {
-//   return src('./src/*.pug')
-//     .pipe($.pug({ pretty: true }))
-//     .pipe(dest('./dist'));
-// }
-
 function compile() {
   return src('./src/ejs/*.ejs')
     .pipe($.ejs({}, {}, { ext: ".html" }))
     .pipe($.rename({ extname: ".html" }))
-    .pipe($.replace(/[\s\S]*?(<!DOCTYPE)/, "$1"))
     .pipe(dest('./dist'));
 }
 

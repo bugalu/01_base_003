@@ -1,0 +1,10 @@
+<header class="header">
+  <h1 class="header__title"><%= meta.title %></h1>
+  <nav>
+    <ul class="header__nav-list">
+      <% meta.menus.forEach(menu => { _%>
+        <li class="header__nav-item"><%= menu _%></li>
+      <% }); _%>
+    </ul>
+  </nav>
+</header>

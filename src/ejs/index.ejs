@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <%
-  const title = 'はじめてのEJS!';
+  const title = 'タイトル';
   const publisher = 'OR-IKEDA';
+  const menus = ['Top','Features','About','Contact',]
+  const pageMeta = {title, publisher, menus}
 %>
 <html lang="ja">
 <head>
@@ -10,6 +12,7 @@
   <title><%= title %> | <%= publisher %></title>
 </head>
 <body>
-  <h1><%= title %></h1>
+<%- include( 'includes/_header.ejs', { meta: pageMeta } )%>
+<%- include( 'includes/_footer.ejs', { meta: pageMeta } )%>
 </body>
 </html>
